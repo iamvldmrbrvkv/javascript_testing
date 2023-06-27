@@ -15,12 +15,20 @@ describe('Robot', () => {
             expect(Robot.greet.called).to.be.true;
             expect(Robot.greet.calledWith('codey')).to.be.true;
             expect(Robot.greet.returned('Hello codey')).to.be.true;
-            expect(Robot.name).to.have.lengthOf(8);
-            assert.lengthOf(Robot.name, 8);
-            assert.typeOf(Robot.name, 'string', 'name is a string');
 
             // Teardown
             Robot.greet.restore();
+        });
+    });
+
+    describe('.name', () => {
+        it('checking length of .name property', () => {
+            expect(Robot.name).to.have.lengthOf(8);
+            assert.lengthOf(Robot.name, 8);
+        });
+
+        it('checking type of .name property', () => {
+            assert.typeOf(Robot.name, 'string', 'name is a string');
         });
     });
 });
