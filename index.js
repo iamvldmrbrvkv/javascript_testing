@@ -1,7 +1,9 @@
 const Robot = {
-    greet(name){
-      return 'Hello ' + name;
-    }
-  };
+    name: 'Vladimir',
 
-  module.exports = Robot;
+    greet(name) {
+        return 'Hello ' + name;
+    }
+};
+
+module.exports = Robot;
